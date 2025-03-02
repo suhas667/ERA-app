@@ -1,0 +1,102 @@
+/* style.scss */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+  color: #ecf0f1;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #2c3e50;
+  color: white;
+}
+header .subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+header input {
+  padding: 5px;
+  border: none;
+}
+header button {
+  background: #d35400;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.collection {
+  text-align: center;
+  padding: 20px;
+  background: #46637f;
+}
+.collection .season-buttons button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #d35400;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+.collection .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.collection .product {
+  text-align: center;
+  background: #2b3c4e;
+  padding: 10px;
+  border-radius: 5px;
+}
+.collection .product img {
+  width: 100%;
+  border-radius: 5px;
+}
+.collection .product p {
+  margin: 5px 0;
+}
+.collection .product span {
+  font-weight: bold;
+  color: #d35400;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background: #22303d;
+}
+.story img {
+  width: 50%;
+  border-radius: 10px;
+}
+.story .story-text {
+  max-width: 400px;
+}
+.story button {
+  background: #d35400;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .story {
+    flex-direction: column;
+  }
+  .story img {
+    width: 100%;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}/*# sourceMappingURL=styles.css.map */

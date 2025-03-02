@@ -1,0 +1,107 @@
+/* style.scss */
+$primary-color: #d35400;
+$secondary-color: #2c3e50;
+$text-color: #ecf0f1;
+$background: #34495e;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: $background;
+    color: $text-color;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: $secondary-color;
+    color: white;
+    .subscribe {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    input {
+        padding: 5px;
+        border: none;
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.collection {
+    text-align: center;
+    padding: 20px;
+    background: lighten($background, 10%);
+    .season-buttons button {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid $primary-color;
+        background: transparent;
+        cursor: pointer;
+        color: white;
+    }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+    .product {
+        text-align: center;
+        background: darken($background, 5%);
+        padding: 10px;
+        border-radius: 5px;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        span {
+            font-weight: bold;
+            color: $primary-color;
+        }
+    }
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background: darken($background, 10%);
+    img {
+        width: 50%;
+        border-radius: 10px;
+    }
+    .story-text {
+        max-width: 400px;
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+    }
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}

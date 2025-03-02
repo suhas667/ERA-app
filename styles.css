@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #c6d2d2;
+  color: #000000;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #c2cfd2;
+  color: rgb(0, 0, 0);
+}
+header .subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+header input {
+  padding: 10px;
+  border: solid 2px rgb(0, 0, 0);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 250px;
+}
+header button {
+  background: #ef9235;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.collection {
+  text-align: center;
+  padding: 20px;
+  background: #e3e9e9;
+}
+.collection .season-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.collection .season-buttons button {
+  padding: 10px;
+  border: 2px solid orange;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.collection .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.collection .product {
+  text-align: center;
+  background: #b8c7c7;
+  padding: 10px;
+  border-radius: 5px;
+}
+.collection .product img {
+  width: 100%;
+  border-radius: 5px;
+}
+.collection .product p {
+  margin: 5px 0;
+}
+.collection .product span {
+  font-weight: bold;
+  color: #ef9235;
+}
+
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #aabcbc;
+}
+.story img {
+  width: 50%;
+  border-radius: 10px;
+}
+.story .story-text {
+  max-width: 400px;
+  text-align: center;
+}
+.story button {
+  background: #ef9235;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .story {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .story img {
+    width: 100%;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

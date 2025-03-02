@@ -1,0 +1,124 @@
+$primary-color: #ef9235;
+$secondary-color: #c2cfd2;
+$text-color: #000000;
+$background: #c6d2d2;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: $background;
+    color: $text-color;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: $secondary-color;
+    color: rgb(0, 0, 0);
+    .subscribe {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    input {
+        padding: 10px;
+        border: solid 2px rgb(0, 0, 0);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        width: 250px;
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+}
+
+.collection {
+    text-align: center;
+    padding: 20px;
+    background: lighten($background, 10%);
+    .season-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .season-buttons button {
+        padding: 10px;
+        border: 2px solid orange;
+        background: transparent;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+    }
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+    .product {
+        text-align: center;
+        background: darken($background, 5%);
+        padding: 10px;
+        border-radius: 5px;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        span {
+            font-weight: bold;
+            color: $primary-color;
+        }
+    }
+}
+
+.story {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: darken($background, 10%);
+    img {
+        width: 50%;
+        border-radius: 10px;
+    }
+    .story-text {
+        max-width: 400px;
+        text-align: center;
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        color: white;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .story img {
+        width: 100%;
+    }
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
